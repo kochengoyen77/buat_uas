@@ -100,7 +100,7 @@ st.pyplot(plt)
 #bagian 1
 jumlah_produksi = dfb[:1].iloc[0]['produksi']
 kode_negara = dfb[:1].iloc[0]['kode_negara']
-st.write(nama_negara) = ""
+nama_negara = ""
 region_negara = ""
 subregion_negara = ""
 
@@ -112,7 +112,7 @@ for i in range(len(df_info)):
 
 st.write('Negara dengan Produksi Terbesar')
 st.write(jumlah_produksi)
-st.write('kode_negara')
+st.write(kode_negara[:1])
 st.write(list(df_info['name'])[i])
 st.write(list(df_info['region'])[i])
 st.write(list(df_info['sub-region'])[i])
