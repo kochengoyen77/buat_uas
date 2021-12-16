@@ -56,6 +56,9 @@ left_col.write(df2)
 
 #OUTPUT GRAFIK A
 fig, ax = plt.subplots()
+ax = plt.gca()
+ax.tick_params(axis='x', colors='blue')
+ax.tick_params(axis='y', colors='red')
 ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'])
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
 ax.set_xlabel("Tahun", color="green", fontsize = 20)
@@ -104,7 +107,7 @@ dk = pd.DataFrame(list(zip(list_a,kumulatif)), columns = ['kode_negara','kumulat
 dk = dk.sort_values(by=['kumulatif'], ascending = False)
 dk = dk[:n]
 
-dk.plot.bar(x='kode_negara' color = r, y='kumulatif') 
+dk.plot.bar(x='kode_negara', y='kumulatif') 
 plt.scatter(x='kode_negara', y='kumulatif')
 plt.show()
 st.pyplot(plt)
