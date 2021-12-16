@@ -105,8 +105,9 @@ dk = dk.sort_values(by=['kumulatif'], ascending = False)
 dk = dk[:n]
 
 dk.plot.bar(x='kode_negara', y='kumulatif') 
-style.use('ggplot')
-plt.scatter(x='kode_negara', y='kumulatif', color="red", marker='x', label='item 1000')
+colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
+plt.scatter(x='kode_negara', y='kumulatif', labels=labels, colors=colors,
+        autopct='%1.1f%%', shadow=True, startangle=90)
 plt.show()
 st.pyplot(plt)
 '''
