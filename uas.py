@@ -55,14 +55,13 @@ left_col.write(df2)
 
 #OUTPUT GRAFIK A
 fig, ax = plt.subplots()
-
+fig.update_traces(line_color='#fd6341')
 ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'])
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
 ax.set_xlabel("Tahun", fontsize = 12)
 ax.set_ylabel("Jumlah Produksi", fontsize = 12)
 ax.legend(fontsize = 2)
 plt.show()
-fig.update_traces(line_color='#fd6341')
 right_col.pyplot(fig)
 
 #--b--
