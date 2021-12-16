@@ -129,7 +129,7 @@ for i in range(len(df_info)):
 
 st.write('Negara dengan Produksi Terbesar')
 st.write(jumlah_produksi)
-st.write(kode_negara[:1])
+st.write(kode_negara)
 st.write(nama_negara)
 st.write(region_negara)
 st.write(subregion_negara)
@@ -147,11 +147,11 @@ for i in range(len(df_info)):
         subregion_negara = list(df_info['sub-region_negara'])[i]
 
 st.write('Negara dengan Produksi Terbesar pada Keseluruhan Tahun')
-st.write("jumlah_produksi")
-st.write(kode_negara = list(df_info['alpha-3'])[i])
-st.write("nama_negara")
-st.write("region_negara")
-st.write("subregion_negara")
+st.write(jumlah_produksi)
+st.write(kode_negara)
+st.write(nama_negara)
+st.write(region_negara)
+st.write(subregion_negara)
 '''
 #bagian 2
 dfterkecil = dfb[dfb.produksi !=-1]
