@@ -114,8 +114,8 @@ st.write('Negara dengan Produksi Terbesar')
 st.write(jumlah_produksi)
 st.write(kode_negara[:1])
 st.write(nama_negara = list(df_info[nama_negara])[i][0])
-st.write('region_negara = df_info[region_negara])[i])
-st.write('subregion_negara = df_info['sub-region_negara'])[i])
+st.write(region_negara = df_info[region_negara])[i][0])
+st.write(subregion_negara = df_info['sub-region_negara'])[i][0])
 
 jumlah_produksi = dk[:1].iloc[0]['kumulatif']
 kode_negara = dk[:1].iloc[0]['kode_negara']
