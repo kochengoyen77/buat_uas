@@ -22,7 +22,7 @@ print(df)
 
 
 #MEMBUAT DATA FRAME TIAP FILE
-st.title('Data Produksi Minyak Mentah')
+st.title('Data Produksi Minyak Mentah').
 st.header('UAS Pemrograman Komputer')
 ch_ = csvHandler('produksi_minyak_mentah.csv')
 jh_ = jsonHandler('kode_negara_lengkap.json')
@@ -69,7 +69,7 @@ st.sidebar.header('Pengaturan Negara dengan Produksi Terbesar')
 tahun = st.sidebar.number_input("Pilih Tahun produksi", min_value=1971, max_value=2015)
 n = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 
-dfb = df.loc[df['tahun'] == tahun][:n]
+dfb = df.loc[df['tahun'] == tahun]
 dfb = dfb.sort_values(by='produksi', ascending = False)
 df3 = dfb[:n]
 
