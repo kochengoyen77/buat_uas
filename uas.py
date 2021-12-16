@@ -79,16 +79,9 @@ n = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 dfb = csv_.loc[csv_['tahun'] == tahun]
 dfb = dfb.sort_values(by='produksi', ascending = False)
 dfb = dfb[:n]
-     
-dic = {'negara':negara_pertahun,'produksi_maks':produksi_maks}
-df__ = pd.DataFrame(dic)
-df__ = df__.sort_values('produksi_maks',ascending=False).reset_index()
-df__.plot.bar(x='kode_negara', y='produksi')
 plt.show()
 st.pyplot(plt)
 
-st.write('Input banyak negara dan tahun di kiri')
-st.pyplot(plt)
 #--c--
 list_a = []
 kumulatif = []
