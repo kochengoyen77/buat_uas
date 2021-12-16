@@ -139,7 +139,7 @@ subregion_negara = ""
 
 for i in range(len(df_info)):
     if list(df_info['alpha-3'])[i]==kode_negara:
-        nama_negara = list(df_info['nama'])[i]
+        nama_negara = list(df_info['name'])[i]
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
 
