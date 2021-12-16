@@ -105,7 +105,6 @@ dk = dk.sort_values(by=['kumulatif'], ascending = False)
 dk = dk[:n]
 
 dk.plot.bar(x='kode_negara', y='kumulatif') 
-colors = [dk.plot.bar='yellowgreen']
 plt.scatter(x='kode_negara', y='kumulatif')
 plt.show()
 st.pyplot(plt)
