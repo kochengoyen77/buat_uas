@@ -163,6 +163,7 @@ st.write(subregion_negara)
                                     
 dfkumulatifmin=dk[dk.kumulatif !=0]
 dfkumulatifmin = dfkumulatifmin[:1].sort_values(by='produksi', ascending = True)
+sorted_dfkumulatifmin = dict( sorted(dfkumulatifmin.items(), key=operator.itemgetter(1),reverse=True))
 jumlah_produksi = dfkumulatifmin[:1].iloc[0]['kumulatif']
 kode_negara = dfkumulatifmin[:1].iloc[0]['kode_negara']
 nama_negara = ""
