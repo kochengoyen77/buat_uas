@@ -101,7 +101,7 @@ dk = pd.DataFrame(list(zip(list_a,kumulatif)), columns = ['kode_negara','kumulat
 dk = dk.sort_values(by=['kumulatif'], ascending = False)
 dk = dk[:n]
 
-dk.plot.bar(x='kode_negara', y='kumulatif') 
+dk.plot.bar(x='kode_negara', y='kumulatif' color = #FF0000) 
 plt.show()
 st.pyplot(plt)
 '''
