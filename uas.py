@@ -24,7 +24,7 @@ print(df)
 
 #MEMBUAT DATA FRAME TIAP FILE
 color = ['yellow', 'blue', 'red', 'green']
-st.title('Data Produksi Minyak Mentah', axis = 1, color = 'yellow')
+st.title('Data Produksi Minyak Mentah', color = 'yellow')
 st.header('UAS Pemrograman Komputer')
 ch_ = csvHandler('produksi_minyak_mentah.csv')
 jh_ = jsonHandler('kode_negara_lengkap.json')
