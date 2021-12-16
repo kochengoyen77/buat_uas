@@ -60,7 +60,7 @@ ax.set_xlabel("Tahun", fontsize = 12)
 ax.set_ylabel("Jumlah Produksi", fontsize = 12)
 ax.legend(fontsize = 2)
 plt.show()
-st.pyplot(fig)
+right_col.pyplot(fig)
 
 #--b--
 
