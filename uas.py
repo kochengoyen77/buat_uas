@@ -112,7 +112,7 @@ for i in range(len(df_info)):
 
 st.write('Negara dengan Produksi Terbesar')
 st.write(jumlah_produksi)
-st.write(kode_negara)
+st.write.kode_negara
 st.write(nama_negara)
 st.write(region_negara)
 st.write(subregion_negara)
