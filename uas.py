@@ -38,7 +38,7 @@ negara = st.sidebar.selectbox('Pilih negara : ',negara_li)
 
 kode = df_info[df_info['name']==negara]['alpha-3'].tolist()[0]
 
-st.sidebar.write('Kode negara : ',kode)
+st.sidebar.write('Kode negara : ',kode, color = "green")
 st.sidebar.write('Negara : ',negara)
 
 # MENGUBAH STRING MENJADI FLOAT
