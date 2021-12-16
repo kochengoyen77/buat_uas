@@ -76,7 +76,7 @@ for i in list_kodekumpulannegara :
     csv_ = csv_[csv_.kode_negara != i]
 print(csv_)
    
-st.sidebar.header('Pengaturan Negara dengan Produksi Terbesar', colors = "red")
+st.sidebar.header('Pengaturan Negara dengan Produksi Terbesar')
 tahun = st.sidebar.number_input("Pilih Tahun produksi", min_value=1971, max_value=2015)
 n = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 
@@ -109,7 +109,7 @@ dk.plot.bar(x='kode_negara', y='kumulatif')
 plt.scatter(x='kode_negara', y='kumulatif')
 plt.show()
 st.pyplot(plt)
-'''
+
 #--d--
 #bagian 1
 jumlah_produksi = dfb[:1].iloc[0]['produksi']
@@ -152,7 +152,7 @@ st.write(kode_negara = list(df_info['alpha-3'])[i])
 st.write("nama_negara")
 st.write("region_negara")
 st.write("subregion_negara")
-
+'''
 #bagian 2
 dfterkecil = dfb[dfb.produksi !=-1]
 xa = dict(sorted(dfterkecil.items(),sort_values(by=['produksi'], is_ascending=True)
