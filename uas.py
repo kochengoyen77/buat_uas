@@ -100,7 +100,7 @@ st.pyplot(plt)
 #bagian 1
 jumlah_produksi = dfb[:1].iloc[0]['produksi']
 kode_negara = dfb[:1].iloc[0]['kode_negara']
-nama_negara = ""
+nama_negara = dfb[:1].iloc[0]['nama_negara']
 region_negara = ""
 subregion_negara = ""
 
