@@ -25,7 +25,7 @@ print(df)
 #MEMBUAT DATA FRAME TIAP FILE
 st.title('Data Produksi Minyak Mentah')
 st.header('UAS Pemrograman Komputer')
-st.header('Tan Manuel Widjaja')
+st.footer('Tan Manuel Widjaja - 12220012')
 ch_ = csvHandler('produksi_minyak_mentah.csv')
 jh_ = jsonHandler('kode_negara_lengkap.json')
 csv_ = ch_.dataFrame
@@ -33,7 +33,7 @@ df_info = jh_.dataFrame
 negara_li = df_info['name'].tolist()
 
 #MENGATUR LETAK OUTPUT
-st.sidebar.title("Pengaturan")
+st.sidebar.title("Settings")
 st.sidebar.header('Pengaturan Jumlah Produksi Per Bulan')
 left_col, mid_col, right_col = st.columns(3)
 negara = st.sidebar.selectbox('Pilih negara : ',negara_li) 
@@ -60,7 +60,7 @@ fig, ax = plt.subplots()
 ax = plt.gca()
 ax.tick_params(axis='x', colors='blue')
 ax.tick_params(axis='y', colors='red')
-ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'])
+ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'], kind='bar' color ='red')
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
 ax.set_xlabel("Tahun", color="green", fontsize = 20)
 ax.set_ylabel("Jumlah Produksi", color="yellow", fontsize = 20)
