@@ -55,7 +55,7 @@ df['produksi'] = pd.to_numeric(df['produksi'], errors='coerce')
 #OUTPUT TABEL A
 df2 = pd.DataFrame(df,columns= ['kode_negara','tahun','produksi'])
 df2=df2.loc[df2['kode_negara']==kode]
-df2['produksi'] = pd.to_numeric(df2.sort['produksi'], errors='coerce')
+df2['produksi'] = pd.to_numeric(['produksi'], errors='coerce')
 
 left_col.write(df2)
 
