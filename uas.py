@@ -106,8 +106,7 @@ dk = dk[:n]
 
 dk.plot.bar(x='kode_negara', y='kumulatif') 
 colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
-plt.scatter(x='kode_negara', y='kumulatif', labels=labels, colors=colors,
-        autopct='%1.1f%%', shadow=True, startangle=90)
+plt.scatter(x='kode_negara', y='kumulatif',  colors=colors)
 plt.show()
 st.pyplot(plt)
 '''
