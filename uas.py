@@ -56,7 +56,7 @@ left_col.write(df2)
 
 #OUTPUT GRAFIK A
 fig, ax = plt.subplots()
-
+colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
 ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'])
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
 ax.set_xlabel("Tahun", color="red", fontsize = 20)
@@ -64,6 +64,7 @@ ax.set_ylabel("Jumlah Produksi", color="yellow", fontsize = 20)
 ax.legend(fontsize = 2)
 plt.scatter("Tahun", "Jumlah Produksi", color="yellow", marker='x', label='item 1')
 plt.show()
+plt.axis('equal')
 right_col.pyplot(fig)
 
 #--b--
