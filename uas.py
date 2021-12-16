@@ -141,7 +141,7 @@ st.write("subregion_negara")
 
 #bagian 2
 dfterkecil = dfb[dfb.produksi !=0]
-dfterkecil = dfterkecil.sort_values(by=['produksi'],ascending=false]
+dfterkecil == dfterkecil.sort_values(by=['produksi'],ascending=false]
 jumlah_produksi = dfterkecil[:1].iloc[0]['produksi']
 kode_negara = dfterkecil[:1].iloc[0]['kode_negara']
 nama_negara = ""
