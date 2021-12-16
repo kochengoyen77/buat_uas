@@ -76,8 +76,8 @@ tahun = st.sidebar.number_input("Pilih Tahun produksi", min_value=1971, max_valu
 n = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 
 list1 = []
-for i in list1 (df2['kode negara']):
-    if i not in (df2['alpha-3']):
+for i in list1 (ch_['kode negara']):
+    if i not in (jh_['alpha-3']):
         list1.append(i)
 for i in list1:
     df2 = df2[df2['kode negara']!=1]
