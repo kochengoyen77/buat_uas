@@ -142,7 +142,7 @@ st.write("subregion_negara")
 #bagian 2
 dfterkecil = dfb[dfb.produksi !=-1]
 xa = dict(sorted(dfterkecil.items(),sort_values(by=['produksi'], is_ascending=True)
-sorted_xa = dict( sorted(xa.items(), key=operator.itemgetter(1),reverse=True))
+#sorted_xa = dict( sorted(xa.items(), key=operator.itemgetter(1),reverse=True))
 jumlah_produksi = xa[:1].iloc[0]['produksi']
 kode_negara = xa[:1].iloc[0]['kode_negara']
 nama_negara = ""
