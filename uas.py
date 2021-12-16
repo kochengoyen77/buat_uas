@@ -24,7 +24,7 @@ print(df)
 
 #MEMBUAT DATA FRAME TIAP FILE
 st.title('Data Produksi Minyak Mentah')
-st.header('UAS Pemrograman Komputer', color ="blue")
+st.header('UAS Pemrograman Komputer')
 ch_ = csvHandler('produksi_minyak_mentah.csv')
 jh_ = jsonHandler('kode_negara_lengkap.json')
 csv_ = ch_.dataFrame
@@ -55,7 +55,7 @@ df2['produksi'] = pd.to_numeric(df2['produksi'], errors='coerce')
 left_col.write(df2)
 
 #OUTPUT GRAFIK A
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(),color ="red"
 
 ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'], color = "black")
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
