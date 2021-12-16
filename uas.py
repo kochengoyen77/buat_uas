@@ -80,7 +80,7 @@ dfb = csv_.loc[csv_['tahun'] == tahun]
 dfb = dfb.sort_values(by='produksi', ascending = False).
 dfb = dfb[:n]
 '''
-df = df_
+df = df__
 dfJ = df_info
 
 df = df[df['tahun']==T]
