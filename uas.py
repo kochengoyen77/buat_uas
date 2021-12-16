@@ -88,7 +88,7 @@ dfb = dfb.sort_values(by='produksi', ascending = False)
 df3 = dfb[:n]
 print(df3)
 df3.plot.bar(x='kode_negara', y='produksi')
-s.plot(kind='bar', color=my_colors, )
+s.plot(kind='bar', color='red', )
 plt.show()
 st.pyplot(plt)
 
