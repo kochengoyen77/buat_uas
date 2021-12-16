@@ -77,7 +77,7 @@ tahun = st.sidebar.number_input("Pilih Tahun produksi", min_value=1971, max_valu
 n = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 
 dfb = csv_.loc[csv_['tahun'] == tahun]
-dfb = dfb.sort_values(by='produksi', ascending = False).
+dfb = dfb.sort_values(by='produksi', ascending = False)
 dfb = dfb[:n]
      
 dic = {'negara':negara_pertahun,'produksi_maks':produksi_maks}
