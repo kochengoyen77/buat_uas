@@ -130,7 +130,7 @@ for i in range(len(df_info)):
         subregion_negara = list(df_info['sub-region'])[i]
 
 st.write('Negara dengan Produksi Terbesar pada Keseluruhan Tahun')
-st.write(jumlah_produksi)
+st.write("jumlah_produksi")
 st.write(kode_negara)
 st.write(nama_negara)
 st.write(region_negara)
