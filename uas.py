@@ -89,7 +89,7 @@ dfb = dfb.sort_values(by='produksi', ascending = False)
 df3 = dfb[:n]
 print(df3)
 my_colors = 'rgbkymc'
-df3.series.plot(s, kind='bar', color = my_colors)
+pd.series.plot(s, kind='bar', color = my_colors)
 df3.plot.bar(x='kode_negara', y='produksi')
 plt.show()
 st.pyplot(plt)
