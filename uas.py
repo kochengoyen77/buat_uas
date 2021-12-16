@@ -89,7 +89,7 @@ plt.show()
 st.pyplot(plt)
 
 #--c--
-a = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
+m = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 list_a = []
 kumulatif = []
 
@@ -103,7 +103,7 @@ for i in list_a :
     
 dk = pd.DataFrame(list(zip(list_a,kumulatif)), columns = ['kode_negara','kumulatif'])
 dk = dk.sort_values(by=['kumulatif'], ascending = False)
-dk = dk[:a]
+dk = dk[:m]
 
 dk.plot.bar(x='kode_negara', y='kumulatif') 
 plt.scatter(x='kode_negara', y='kumulatif', color="red", marker='x', label='item 1000')
