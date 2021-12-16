@@ -84,7 +84,7 @@ df3 = dfb[:n]
 print(df3)
 df3.plot.bar(x='kode_negara', y='produksi')
 plt.show()
-st.write(plt)
+st.pyplot(plt)
 #--c--
 list_a = []
 kumulatif = []
