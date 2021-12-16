@@ -20,6 +20,7 @@ csv = pd.read_csv("produksi_minyak_mentah.csv")
 df = pd.DataFrame(csv)
 print(df)
 
+
 #MEMBUAT DATA FRAME TIAP FILE
 st.title('Data Produksi Minyak Mentah')
 st.header('UAS Pemrograman Komputer')
@@ -29,6 +30,10 @@ csv_ = ch_.dataFrame
 df_info = jh_.dataFrame
 negara_li = df_info['name'].tolist()
 
+list1 = []
+for i in list1 (csv_['kode negara']):
+    if i not in (json_['alpha-3']):
+        list1.append(i)
 #MENGATUR LETAK OUTPUT
 st.sidebar.title("Pengaturan")
 st.sidebar.header('Pengaturan Jumlah Produksi Per Bulan')
@@ -56,7 +61,7 @@ left_col.write(df2)
 fig, ax = plt.subplots()
 ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'])
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
-ax.set_xlabel("Tahun", fontsize = 12 color=red)
+ax.set_xlabel("Tahun", fontsize = 12)
 ax.set_ylabel("Jumlah Produksi", fontsize = 12)
 ax.legend(fontsize = 2)
 plt.show()
