@@ -79,6 +79,7 @@ st.pyplot(plt)
 #--c--
 list_a = []
 kumulatif = []
+x = st.sidebar.number_input("Pilih Banyak Negara 2", min_value=1, max_value=None)
 
 for i in list (csv_['kode_negara']) :
     if i not in list_a:
@@ -90,7 +91,7 @@ for i in list_a :
     
 dk = pd.DataFrame(list(zip(list_a,kumulatif)), columns = ['kode_negara','kumulatif'])
 dk = dk.sort_values(by=['kumulatif'], ascending = False)
-dk = dk[:n]
+dk = dk[:x]
 
 dk.plot.bar(x='kode_negara', y='kumulatif') 
 plt.show()
