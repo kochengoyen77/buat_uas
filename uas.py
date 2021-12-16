@@ -25,7 +25,7 @@ print(df)
 #MEMBUAT DATA FRAME TIAP FILE
 st.title('Data Produksi Minyak Mentah')
 st.header('UAS Pemrograman Komputer')
-st.header('Tan Manuel Widjaja - 12220012', color = 'red')
+st.header('Tan Manuel Widjaja - 12220012')
 ch_ = csvHandler('produksi_minyak_mentah.csv')
 jh_ = jsonHandler('kode_negara_lengkap.json')
 csv_ = ch_.dataFrame
@@ -88,6 +88,8 @@ dfb = csv_.loc[csv_['tahun'] == tahun]
 dfb = dfb.sort_values(by='produksi', ascending = False)
 df3 = dfb[:n]
 print(df3)
+my_colors = 'rgbkymc'
+df3.series.plot(s, kind='bar', color = my_colors)
 df3.plot.bar(x='kode_negara', y='produksi')
 plt.show()
 st.pyplot(plt)
