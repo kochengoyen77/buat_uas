@@ -23,7 +23,7 @@ print(df)
 
 
 #MEMBUAT DATA FRAME TIAP FILE
-st.title('Data Produksi Minyak Mentah')
+st.title('Data Produksi Minyak Mentah', color ='Red')
 st.header('UAS Pemrograman Komputer')
 ch_ = csvHandler('produksi_minyak_mentah.csv')
 jh_ = jsonHandler('kode_negara_lengkap.json')
