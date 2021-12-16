@@ -83,8 +83,8 @@ dfb = dfb[:n]
 df = csv_
 dfJ = df_info
 
-df = df[df['tahun']==T]
-kode_negara = df[df['tahun']==T]['kode_negara'].tolist()
+df = csv_[csv_['tahun']==T]
+kode_negara = csv_[csv_['tahun']==T]['kode_negara'].tolist()
 # produksi = df[df['tahun']==T]['produksi'].tolist()
 
 produksi_maks = []
@@ -93,7 +93,7 @@ negara_pertahun = []
 kode_negara = list(dict.fromkeys(kode_negara))
 for kode in kode_negara:
     try:
-        produksi = df[df['kode_negara']==kode]['produksi'].tolist()
+        produksi = csv_[csv_['kode_negara']==kode]['produksi'].tolist()
         negara = dfJ[dfJ['alpha-3']==kode]['name'].tolist()[0]
         produksi_maks.append(max(produksi))
         negara_pertahun.append(negara)
