@@ -80,8 +80,7 @@ st.pyplot(plt)
 #--c--
 list_a = []
 kumulatif = []
-x = st.sidebar.number_input("Pilih Banyak Negara 2", min_value=1, max_value=None)
-'''
+
 for i in list (csv_['kode_negara']) :
     if i not in list_a:
         list_a.append(i)
@@ -89,29 +88,13 @@ for i in list (csv_['kode_negara']) :
 for i in list_a :
     a=csv_.loc[csv_['kode_negara'] ==i,'produksi'].sum()
     kumulatif.append(a)
-'''
+    
 dk = pd.DataFrame(list(zip(list_a,kumulatif)), columns = ['kode_negara','kumulatif'])
 dk = dk.sort_values(by=['kumulatif'], ascending = False)
-dk = dk[:x]
+dk = dk[:n]
 
 dk.plot.bar(x='kode_negara', y='kumulatif') 
 plt.show()
-st.pyplot(plt)
-'''
-jumlah_produksi = dfb['produksi'][:1]
-kode_negara = dfb['kode_negara'][:1]
-nama_negara = ""
-region_negara = ""
-subregion_negara = ""
-
-for i in range(len(json_)):
-    if list(json_['alpha-3'])[i]==kode_negara:
-        nama_negara = list(json_['name'])[i]
-        region_negara = list(json_['region'])[i]
-        subregion_negara = list(json_['sub-region'])[i]
-
-st.right
-'''
 
 #--d--
 #bagian 1
