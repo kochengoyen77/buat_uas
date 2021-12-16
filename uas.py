@@ -84,7 +84,7 @@ df = csv_
 dfJ = df_info
 
 df = csv_.loc[csv_['tahun'] == tahun]
-kode_negara = csv_[csv_['tahun']==T]['kode_negara'].tolist()
+kode_negara = csv_.loc[csv_['tahun']== tahun]['kode_negara'].tolist()
 # produksi = df[df['tahun']==T]['produksi'].tolist()
 
 produksi_maks = []
