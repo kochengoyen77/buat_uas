@@ -55,7 +55,7 @@ df['produksi'] = pd.to_numeric(df['produksi'], errors='coerce')
 #OUTPUT TABEL A
 df2 = pd.DataFrame(df,columns= ['kode_negara','tahun','produksi'])
 df2=df2.loc[df2['kode_negara']==kode]
-df2['produksi'] = pd.to_numeric(df2['produksi'], errors='coerce')
+df2['produksi'] = pd.to_numeric(df2.sort_values['produksi'], errors='coerce')
 
 left_col.write(df2)
 
@@ -93,7 +93,7 @@ st.pyplot(plt)
 list_a = []
 kumulatif = []
 x = st.sidebar.number_input("Pilih Banyak Negara 2", min_value=1, max_value=None)
-
+'''
 for i in list (csv_['kode_negara']) :
     if i not in list_a:
         list_a.append(i)
@@ -101,7 +101,7 @@ for i in list (csv_['kode_negara']) :
 for i in list_a :
     a=csv_.loc[csv_['kode_negara'] ==i,'produksi'].sum()
     kumulatif.append(a)
-    
+'''
 dk = pd.DataFrame(list(zip(list_a,kumulatif)), columns = ['kode_negara','kumulatif'])
 dk = dk.sort_values(by=['kumulatif'], ascending = False)
 dk = dk[:x]
