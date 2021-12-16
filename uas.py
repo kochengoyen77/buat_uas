@@ -78,9 +78,9 @@ dfb = df2.loc[df2['tahun'] == tahun]
 dfb = dfb.sort_values(by='produksi', ascending = False)
 df3 = dfb[:n]
 print(df3)
-df3.plot.bar(x='kode_negara', y='produksi')
+df3.plot.chart(x='kode_negara', y='produksi')
 plt.show()
-st.pyplot(plt)
+st.write(plt)
 #--c--
 list_a = []
 kumulatif = []
