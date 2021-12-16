@@ -95,7 +95,7 @@ dk = dk[:n]
 dk.plot.bar(x='kode_negara', y='kumulatif') 
 plt.show()
 st.pyplot(plt)
-
+'''
 #--d--
 #bagian 1
 jumlah_produksi = dfb[:1].iloc[0]['produksi']
@@ -220,3 +220,4 @@ dfproduksikumulatifnol['sub-region'] = listsubregionkumulatifnol
                                                         
 st.write(dfproduksinol)
 st.write(dfproduksinol)
+'''
