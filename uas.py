@@ -72,7 +72,7 @@ dfb = df.loc[df['tahun'] == tahun][:n]
 dfb = dfb.sort_values(by='produksi', ascending = False)
 dfb = dfb[:n]
 
-dfb.plot.bar(x='kode_negara', y='produksi' color=colors)
+dfb.plot.bar(x='kode_negara', y='produksi')
 plt.show()
 st.pyplot(plt)
 
@@ -95,3 +95,18 @@ dk = dk[:n]
 dk.plot.bar(x='kode_negara', y='kumulatif') 
 plt.show()
 st.pyplot(plt)
+'''
+jumlah_produksi = dfb['produksi'][:1]
+kode_negara = dfb['kode_negara'][:1]
+nama_negara = ""
+region_negara = ""
+subregion_negara = ""
+
+for i in range(len(json_)):
+    if list(json_['alpha-3'])[i]==kode_negara:
+        nama_negara = list(json_['name'])[i]
+        region_negara = list(json_['region'])[i]
+        subregion_negara = list(json_['sub-region'])[i]
+
+st.right
+'''
