@@ -107,7 +107,7 @@ df__.plot.bar(x='kode_negara', y='produksi')
 plt.show()
 st.pyplot(plt)
 '''
-plt.title('{n} Negara dengan Produksi Terbesar pada tahun {t}'.format(n=n,t=t))
+plt.title('{n} Negara dengan Produksi Terbesar pada tahun {tahun}'.format(n=n,tahun=tahun))
 plt.bar(csv_['negara'][:n],csv_['produksi_maks'][:n],width=0.9, bottom=None, align="center",
             color="lightblue", edgecolor="aquamarine", data=None, zorder=3)
 plt.grid(True, color="grey", linewidth="0.7", linestyle="-.", zorder=0)
