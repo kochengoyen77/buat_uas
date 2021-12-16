@@ -113,7 +113,7 @@ for i in range(len(df_info)):
 st.write('Negara dengan Produksi Terbesar')
 st.write(jumlah_produksi)
 st.write(kode_negara[:1])
-st.write(nama_negara)= get.column.list(df_info[nama_negara])[i][0])
+indexer = self.columns.get_loc(nama_negara)
 st.write(region_negara = list(df_info[region_negara])[i][0])
 st.write(subregion_negara = list(df_info['sub-region_negara'])[i][0])
 
