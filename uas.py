@@ -150,6 +150,7 @@ st.write(nama_negara)
 st.write(region_negara)
 st.write(subregion_negara)
 
+'''
 #bagian 2
 dfterkecil = dfb[dfb.produksi !=-0]
 xa = dict(sorted(dfterkecil.items(),sort_values(by=['produksi'], is_ascending=True)
@@ -231,4 +232,4 @@ dfproduksikumulatifnol['sub-region'] = listsubregionkumulatifnol
                                                         
 st.write(dfproduksinol)
 st.write(dfproduksinol)
-
+'''
