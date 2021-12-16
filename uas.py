@@ -125,9 +125,9 @@ subregion_negara = ""
 
 for i in range(len(df_info)):
     if list(df_info['alpha-3'])[i]==kode_negara:
-        nama_negara = list(df_info['name'])[i]
-        region_negara = list(df_info['region'])[i]
-        subregion_negara = list(df_info['sub-region'])[i]
+        nama_negara = list(df_info['nama_negara'])[i]
+        region_negara = list(df_info['region_negara'])[i]
+        subregion_negara = list(df_info['sub-region_negara'])[i]
 
 st.write('Negara dengan Produksi Terbesar pada Keseluruhan Tahun')
 st.write("jumlah_produksi")
