@@ -31,7 +31,7 @@ df_info = jh_.dataFrame
 negara_li = df_info['name'].tolist()
 
 #MENGATUR LETAK OUTPUT
-st.sidebar.title("Pengaturan")
+st.sidebar.title("Pengaturan"), color ="yellow"
 st.sidebar.header('Pengaturan Jumlah Produksi Per Bulan')
 left_col, mid_col, right_col = st.columns(3)
 negara = st.sidebar.selectbox('Pilih negara : ',negara_li) 
