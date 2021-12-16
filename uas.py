@@ -99,14 +99,23 @@ for kode in kode_negara:
         negara_pertahun.append(negara)
     except:
         continue
-        
+'''      
 dic = {'negara':negara_pertahun,'produksi_maks':produksi_maks}
 df__ = pd.DataFrame(dic)
 df__ = df__.sort_values('produksi_maks',ascending=False).reset_index()
 df__.plot.bar(x='kode_negara', y='produksi')
 plt.show()
 st.pyplot(plt)
+'''
+plt.title('{B} Negara dengan Produksi Terbesar pada Tahun {T}'.format(B=B,T=T))
+plt.bar(csv_['negara'][:B],csv_['produksi_maks'][:B],width=0.9, bottom=None, align="center",
+            color="lightblue", edgecolor="aquamarine", data=None, zorder=3)
+plt.grid(True, color="grey", linewidth="0.7", linestyle="-.", zorder=0)
+plt.xlabel('negara')
+plt.ylabel('produksi_maksimum')
 
+st.write('Input banyak negara dan tahun di kiri')
+st.pyplot(plt)
 #--c--
 list_a = []
 kumulatif = []
