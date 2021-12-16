@@ -29,12 +29,6 @@ jh_ = jsonHandler('kode_negara_lengkap.json')
 csv_ = ch_.dataFrame
 df_info = jh_.dataFrame
 negara_li = df_info['name'].tolist()
-'''
-list1 = []
-for i in list1 (csv_['kode negara']):
-    if i not in (json_['alpha-3']):
-        list1.append(i)
- '''
 
 #MENGATUR LETAK OUTPUT
 st.sidebar.title("Pengaturan")
