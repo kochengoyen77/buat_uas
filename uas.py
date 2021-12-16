@@ -76,10 +76,9 @@ st.sidebar.header('Pengaturan Negara dengan Produksi Terbesar')
 tahun = st.sidebar.number_input("Pilih Tahun produksi", min_value=1971, max_value=2015)
 n = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 
-df = df[df['tahun']==T]
-kode_negara = df[df['tahun']==T]['kode_negara'].tolist()
 dfb = csv_.loc[csv_['tahun'] == tahun]
-dfb = dfb.aort_values(by='produksi', ascending = False)
+kode_negara = dfb[dfb['tahun']== tahun]['kode_negara'].tolist()
+dfb = dfb.sort_values(by='produksi', ascending = False)
 dfb = dfb[:n]
 
 dfb.plot.bar(x='kode_negara', y='produksi')
