@@ -29,7 +29,14 @@ jh_ = jsonHandler('kode_negara_lengkap.json')
 csv_ = ch_.dataFrame
 df_info = jh_.dataFrame
 negara_li = df_info['name'].tolist()
+list_kodekumpulannegara = []
+for i in list(csv_['kode_negara']) :
+    if i not in list(df_info['alpha-3']) :
+        list_kodekumpulannegara.append(i)
 
+for i in list_kodekumpulannegara :
+    csv_ = csv_[csv_.kode_negara != i]
+print(csv_)
 #MENGATUR LETAK OUTPUT
 st.sidebar.title("Pengaturan")
 st.sidebar.header('Pengaturan Jumlah Produksi Per Bulan')
@@ -70,15 +77,12 @@ st.sidebar.header('Pengaturan Negara dengan Produksi Terbesar')
 tahun = st.sidebar.number_input("Pilih Tahun produksi", min_value=1971, max_value=2015)
 n = st.sidebar.number_input("Pilih Banyak Negara", min_value=1, max_value=None)
 
-for n in list_organisasi:
-    df2 = df2[csv_.kode_negara != n]
-    if n in list_kodenegarahuruf:
-        list_kodenegarahuruf.remove(n)
+
 dfb = df2.loc[df2['tahun'] == tahun]
 dfb = dfb.sort_values(by='produksi', ascending = False)
 df3 = dfb[:n]
 print(df3)
-df3.plot.chart(x='kode_negara', y='produksi')
+df3.plot.bar(x='kode_negara', y='produksi')
 plt.show()
 st.write(plt)
 #--c--
