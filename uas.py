@@ -95,6 +95,7 @@ dk = dk[:n]
 
 dk.plot.bar(x='kode_negara', y='kumulatif') 
 plt.show()
+st.pyplot(plt)
 
 #--d--
 #bagian 1
