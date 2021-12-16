@@ -61,7 +61,7 @@ left_col.write(df2)
 
 #OUTPUT GRAFIK A
 fig, ax = plt.subplots()
-ax.bar(tahun_prod, jumlah_prod, color==colors)
+
 ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'])
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
 ax.set_xlabel("Tahun", fontsize = 12)
