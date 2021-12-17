@@ -114,7 +114,7 @@ st.pyplot(plt)
 list_kodenegara = []
 list_regionnegara = []
 list_subregionnegara = []
-for i in range(len(dataframe_kumulatifnegara)) :
+for i in range(len(dataframe_kumulatifnegara)):
     for j in range(len(dataframe_json)) :
         if list(dataframe_kumulatifnegara['nama_negara'])[i] == list(dataframe_json['name'])[j]:
             list_kodenegara.append(list(dataframe_json['alpha-3'])[j])
