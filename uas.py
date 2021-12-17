@@ -127,7 +127,7 @@ for i in range(len(df_info)):
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
 
-colum1.write('Negara dengan Produksi Terbesar')
+c1.write('Negara dengan Produksi Terbesar')
 col1.write(jumlah_produksi)
 col1.write(kode_negara)
 col1.write(nama_negara)
@@ -146,7 +146,7 @@ for i in range(len(df_info)):
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
 
-colum2.write('Negara dengan Produksi Terbesar pada Keseluruhan Tahun')
+c2.write('Negara dengan Produksi Terbesar pada Keseluruhan Tahun')
 col2.write(jumlah_produksi)
 col2.write(kode_negara)
 col2.write(nama_negara)
@@ -169,12 +169,12 @@ for i in range(len(df_info)):
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
                                     
-st.write('Negara dengan Produksi Terkecil')
-st.write(jumlah_produksi)
-st.write(kode_negara)
-st.write(nama_negara)
-st.write(region_negara)
-st.write(subregion_negara)
+c3('Negara dengan Produksi Terkecil')
+col3.write(jumlah_produksi)
+col3.write(kode_negara)
+col3.write(nama_negara)
+col3.write(region_negara)
+col3.write(subregion_negara)
                                     
 dfakumulatifmin=dk[dk.kumulatif !=0]
 dfakumulatifmin = dfakumulatifmin[:1].sort_values(by=['kumulatif'], ascending = True)
