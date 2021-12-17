@@ -127,7 +127,7 @@ for i in range(len(df_info)):
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
 
-c1.write('Negara dengan Produksi Terbesar')
+col1.write('Negara dengan Produksi Terbesar')
 col1.write(jumlah_produksi)
 col1.write(kode_negara)
 col1.write(nama_negara)
@@ -146,7 +146,7 @@ for i in range(len(df_info)):
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
 
-c2.write('Negara dengan Produksi Terbesar pada Keseluruhan Tahun')
+col2.write('Negara dengan Produksi Terbesar pada Keseluruhan Tahun')
 col2.write(jumlah_produksi)
 col2.write(kode_negara)
 col2.write(nama_negara)
@@ -169,7 +169,7 @@ for i in range(len(df_info)):
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
                                     
-c3('Negara dengan Produksi Terkecil')
+col3.write('Negara dengan Produksi Terkecil')
 col3.write(jumlah_produksi)
 col3.write(kode_negara)
 col3.write(nama_negara)
