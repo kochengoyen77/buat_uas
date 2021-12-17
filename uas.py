@@ -53,7 +53,7 @@ df2 = pd.DataFrame(df,columns= ['kode_negara','tahun','produksi'])
 df2=df2.loc[df2['kode_negara']==kode]
 df2['produksi'] = pd.to_numeric(df2['produksi'], errors='coerce')
 
-left_col.write(df2)
+right_col.write(df2)
 
 #OUTPUT GRAFIK A
 fig, ax = plt.subplots()
