@@ -35,7 +35,7 @@ negara_li = df_info['name'].tolist()
 #MENGATUR LETAK OUTPUT
 st.sidebar.title("Settings")
 st.sidebar.header('Pengaturan Jumlah Produksi Per Bulan')
-left_col, mid_col, right_col = st.columns(3)
+left_col, mid_col, right_col = st.columns(30)
 negara = st.sidebar.selectbox('Pilih negara : ',negara_li) 
 
 kode = df_info[df_info['name']==negara]['alpha-3'].tolist()[0]
