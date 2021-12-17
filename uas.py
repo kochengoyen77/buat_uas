@@ -67,7 +67,7 @@ ax.set_ylabel("Jumlah Produksi", color="yellow", fontsize = 20)
 ax.legend(fontsize = 20)
 plt.scatter("Tahun", "Jumlah Produksi", color="yellowgreen", marker='x', label='item 1')
 plt.show()
-left_col.pyplot(fig)
+mid_col.pyplot(fig)
 
 #B
 list_kodekumpulannegara = []
