@@ -22,7 +22,7 @@ df = pd.DataFrame(csv)
 print(df)
 
 
-#MEMBUAT DATA FRAME TIAP FILE
+#MEMBUAT DATA FRAME 
 st.title('Data Produksi Minyak Mentah')
 st.header('UAS Pemrograman Komputer')
 st.header('Tan Manuel Widjaja - 12220012')
@@ -32,7 +32,7 @@ csv_ = ch_.dataFrame
 df_info = jh_.dataFrame
 negara_li = df_info['name'].tolist()
 
-#MENGATUR LETAK OUTPUT
+#LETAK OUTPUT
 st.sidebar.title("Settings")
 st.sidebar.header('Pengaturan Jumlah Produksi Per Bulan')
 left_col, mid_col, right_col = st.columns(3)
@@ -43,12 +43,12 @@ color = ['red', 'green', 'black']
 st.sidebar.write('Kode negara : ',kode, color = "green")
 st.sidebar.write('Negara : ',negara, color = "red")
 
-# MENGUBAH STRING MENJADI FLOAT
 df['produksi'] = df['produksi'].astype(str).str.replace(".", "", regex=True).astype(float)
 df['produksi'] = df['produksi'].astype(str).str.replace(",", "", regex=True).astype(float)
 df['produksi'] = pd.to_numeric(df['produksi'], errors='coerce')
 
-#OUTPUT TABEL A
+#A
+#TABEL A
 df2 = pd.DataFrame(df,columns= ['kode_negara','tahun','produksi'])
 df2=df2.loc[df2['kode_negara']==kode]
 df2['produksi'] = pd.to_numeric(df2['produksi'], errors='coerce')
@@ -60,7 +60,7 @@ fig, ax = plt.subplots()
 ax = plt.gca()
 ax.tick_params(axis='x', colors='blue')
 ax.tick_params(axis='y', colors='red')
-ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'])
+ax.plot(df2['tahun'], df2['produksi'], label = df2['tahun'], color = 'red')
 ax.set_title("Jumlah Produksi Per Tahun di Negara Pilihan")
 ax.set_xlabel("Tahun", color="green", fontsize = 20)
 ax.set_ylabel("Jumlah Produksi", color="yellow", fontsize = 20)
@@ -69,7 +69,7 @@ plt.scatter("Tahun", "Jumlah Produksi", color="yellowgreen", marker='x', label='
 plt.show()
 left_col.pyplot(fig)
 
-#--b--
+#B
 list_kodekumpulannegara = []
 for i in list(csv_['kode_negara']) :
     if i not in list(df_info['alpha-3']) :
