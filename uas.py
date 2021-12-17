@@ -127,12 +127,12 @@ for i in range(len(df_info)):
         region_negara = list(df_info['region'])[i]
         subregion_negara = list(df_info['sub-region'])[i]
 
-right.col.write('Negara dengan Produksi Terbesar')
-right.col.write(jumlah_produksi)
-right.col.write(kode_negara)
-right.col.write(nama_negara)
-right.col.write(region_negara)
-right.col.write(subregion_negara)
+st.write('Negara dengan Produksi Terbesar')
+st.write(jumlah_produksi)
+st.write(kode_negara)
+st.write(nama_negara)
+st.write(region_negara)
+st.write(subregion_negara)
 
 jumlah_produksi = dk[:1].iloc[0]['kumulatif']
 kode_negara = dk[:1].iloc[0]['kode_negara']
