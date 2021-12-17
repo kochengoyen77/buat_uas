@@ -39,7 +39,7 @@ left_col, mid_col, right_col = st.columns(3)
 negara = st.sidebar.selectbox('Pilih negara : ',negara_li) 
 
 kode = df_info[df_info['name']==negara]['alpha-3'].tolist()[0]
-
+color = ['red', 'green', 'black']
 st.sidebar.write('Kode negara : ',kode, color = "green")
 st.sidebar.write('Negara : ',negara, color = "red")
 
